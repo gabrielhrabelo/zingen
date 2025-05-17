@@ -5,6 +5,7 @@
 }
 
 * {
+  transition: all 300ms;
   margin: 0;
   padding: 0;
   font: inherit;
@@ -29,6 +30,15 @@
   --fs-h3: 1.25rem;
   --fs-h2: 1.5rem;
   --fs-h1: 2.5rem;
+  --px-lg: 1.5rem;
+  --py-base: 1rem;
+  --py-lg: 1.5rem;
+  --py-xl: 3rem;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
 }
 
 html {
@@ -37,6 +47,8 @@ html {
   font-size: var(--fs-md);
   line-height: 1.6;
   color: var(--text-color-primary);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -69,6 +81,18 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  background: linear-gradient(
+    90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 ul[role="list"] {
   list-style: none;
 }
@@ -78,5 +102,9 @@ ul[role="list"] {
     --fs-h3: 2rem;
     --fs-h2: 3rem;
     --fs-h1: 4rem;
+    --px-lg: 2rem;
+    --py-base: 1.5rem;
+    --py-lg: 2.5rem;
+    --py-xl: 5rem;
   }
 }
