@@ -11,7 +11,7 @@
   }
 
   .desktop-only {
-    display: initial;
+    display: none;
   }
 
   .even-columns {
@@ -63,3 +63,10 @@
 .px-lg {
   padding-inline: var(--px-lg);
 }
+
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
